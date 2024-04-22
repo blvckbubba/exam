@@ -54,9 +54,9 @@ cd
 sudo apt install mysql-server -y
 sudo apt install mysql-client -y
 sudo systemctl start mysql
-sudo mysql -uroot -e "CREATE DATABASE Exam;"
-sudo mysql -uroot -e "CREATE USER 'soul'@'localhost' IDENTIFIED BY 'vagrant';"
-sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON Exam.* TO 'soul'@'localhost';"
+sudo mysql -uroot -e "CREATE DATABASE Akinrelere;"
+sudo mysql -uroot -e "CREATE USER 'ayo'@'localhost' IDENTIFIED BY 'damope';"
+sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON Akinrelere.* TO 'ayo'@'localhost';"
 cd /var/www/laravel
 sudo sed -i "23 s/^#//g" /var/www/laravel/.env
 sudo sed -i "24 s/^#//g" /var/www/laravel/.env
@@ -66,9 +66,9 @@ sudo sed -i "27 s/^#//g" /var/www/laravel/.env
 sudo sed -i '22 s/=sqlite/=mysql/' /var/www/laravel/.env
 sudo sed -i '23 s/=127.0.0.1/=localhost/' /var/www/laravel/.env
 sudo sed -i '24 s/=3306/=3306/' /var/www/laravel/.env
-sudo sed -i '25 s/=laravel/=Exam/' /var/www/laravel/.env
-sudo sed -i '26 s/=root/=soul/' /var/www/laravel/.env
-sudo sed -i '27 s/=/=vagrant/' /var/www/laravel/.env
+sudo sed -i '25 s/=laravel/=Akinrelere/' /var/www/laravel/.env
+sudo sed -i '26 s/=root/=ayo/' /var/www/laravel/.env
+sudo sed -i '27 s/=/=damope/' /var/www/laravel/.env
 sudo php artisan key:generate
 sudo php artisan storage:link
 sudo php artisan migrate
